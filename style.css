@@ -1,0 +1,145 @@
+body {
+    background-color: #28535380;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#title {
+    text-align: center;
+    color: #092009;
+}
+
+input[type=text], 
+input[type=tel],
+input[type=number],
+input[type=email],
+select {
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#survey-form {
+    width: 80%;
+    margin: auto;
+    background-color: #cfcdcd;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9, auto) 1fr auto auto;
+    grid-template-areas: "description description"
+    "name-label firstname"
+    "email-label email"
+    "age-label age"
+    "number-label tel"
+    "gender gender-radio"
+    "employment employment-dropdown"
+    "owner owner-radio"
+    "brand-name dropdown"
+    "smartphone-features checkbox"
+    "comments textarea"
+    "submit submit";
+    grid-gap: 20px 10px;
+}
+
+#description {
+    padding: 20px auto;
+    grid-area: description;
+    justify-self: center;
+}
+#name-label {
+    grid-area: name-label;
+    justify-self: end;
+}
+input[name=firstname] {
+    grid-area: firstname;
+    width: 45%;
+}
+#email-label {
+    grid-area: email-label;
+    justify-self: end;
+}
+input[name=email] {
+    grid-area: email;
+    width: 45%;
+}
+#age-label {
+    grid-area: age-label;
+    justify-self: end;
+}
+input[name=age] {
+    grid-area: age;
+    width: 30%;
+}
+#number-label {
+    grid-area: number-label;
+    justify-self: end;
+}
+input[name=tel] {
+    grid-area: tel;
+    width: 45%;
+}
+#gender {
+    grid-area: gender;
+    justify-self: end;
+}
+.gender-radio {
+    grid-area: gender-radio;
+    justify-self: start;
+}
+#employment {
+    grid-area: employment;
+    justify-self: end;
+}
+#employment-dropdown {
+    grid-area: employment-dropdown;
+    width: 35%;
+}
+#owner {
+    grid-area: owner;
+    justify-self: end;
+}
+.owner-radio {
+    grid-area: owner-radio;
+    justify-self: start;
+}
+#brand-name {
+    grid-area: brand-name;
+    justify-self: end;
+}
+#dropdown {
+    grid-area: dropdown;
+    width: 35%;
+}
+#smartphone-features {
+    grid-area: smartphone-features;
+    justify-self: end;
+}
+.checkbox {
+    grid-area: checkbox;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+}
+#comments {
+    grid-area: comments;
+    justify-self: end;
+}
+.textarea {
+    grid-area: textarea;
+    justify-self: start;
+    border: none;
+    border-radius: 4px;
+}
+#submit {
+    grid-area: submit;
+    margin: 20px auto;
+    color: #092009;
+    font-size: 20px;
+    width: 10%;
+    height: 50%;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #07f7f766;
+}

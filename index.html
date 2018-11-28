@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey form</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1 id="title">Survey Form</h1>
+
+        <form id="survey-form" action="#">
+            <p id="description">Help us understand the use of technological devices by filling the form honestly.</p>
+
+            <label id="name-label" for="firstname">Name: </label>
+            <input id="name" type="text" placeholder="Enter your name" name="firstname" required>
+            <label id="email-label" for="email">Email: </label>
+            <input id="email" type="email" placeholder="Enter your email" name="email"  required>
+            <label id="age-label" for="age">Age: </label>
+            <input id="number" type="number" min="18" max="80" placeholder="Age" name="age" required>
+            <label id="number-label" for="tel">Phone Number: </label>
+            <input type="tel" pattern='^\+?\d{0,11}' placeholder="Cellphone number" name="tel" required>
+
+            <label id="gender" for="gender">What is your gender?: </label>
+            <div class="gender-radio">
+                <label for="gender"><input type="radio" name="gender" value="male">Male</label> 
+                <label for="gender"><input type="radio" name="gender" value="female">Female</label>
+                <label for="gender"><input type="radio" name="gender" value="other">Other</label>
+            </div>
+
+            <label id="employment" for="employment">Employment status: </label>
+            <select id="employment-dropdown" name="employment">
+                <option value="Student">Student</option>
+                <option value="Part-time employment">Part-time employment</option>
+                <option value="Full-time employment">Full-time employment</option>
+                <option value="Self- employed">Self- employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+
+            <label id="owner" for="owner">Do you currently own any smartphone device?: </label>
+            <div class="owner-radio">
+                <label for="yes"><input type="radio" name="owner" value="yes">Yes</label> 
+                <label for="no"><input type="radio" name="owner" value="no">No</label>
+            </div>
+
+            <label id="brand-name" for="brand-name">What is the brand of the smartphone you are using?: </label>
+            <select id="dropdown" name="brand-name">
+                <option value="Samsung">Samsung</option>
+                <option value="iPhone">iPhone</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Sony">Sony</option>
+                <option value="Nokia">Nokia</option>
+                <option value="Xiomi">Xiomi</option>
+                <option value="LG">LG</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label id="smartphone-features" for="smartphone">What features do you like about your current smartphone?: </label>
+            <div class="checkbox">
+                <input type="checkbox" name="smartphone" value="screen"> Touchscreen<br>
+                <input type="checkbox" name="smartphone" value="connectivity" > Wi-Fi and internet connectivity<br>
+                <input type="checkbox" name="smartphone" value="camera"> Digital camera and video capability<br>
+                <input type="checkbox" name="smartphone" value="memory"> Internal storage and memory capacity<br>
+                <input type="checkbox" name="smartphone" value="gps"> GPS<br>
+                <input type="checkbox" name="smartphone" value="sync"> The ability to sync more than one email accounts<br>
+                <input type="checkbox" name="smartphone" value="design"> Design and hardware durability<br>
+                <input type="checkbox" name="smartphone" value="applications"> The ability to run multiple applications simultaneously<br>
+                <input type="checkbox" name="smartphone" value="synchronization"> Wireless synchronization with other devices<br>
+                <input type="checkbox" name="smartphone" value="third-party"> Support for third-party applications<br>
+                <input type="checkbox" name="smartphone" value="os"> Mobile operating system<br>
+                <input type="checkbox" name="smartphone" value="other"> Other <input type="text" name="specify" placeholder="Specify">
+            </div>
+
+            <label id="comments" for="comments">Any comments or suggestions? </label>
+            <textarea class="textarea" name="comments" cols="30" rows="5"></textarea>
+            
+            <button id="submit" type="submit" value="Sumbmit"><b>Submit</b></button>
+
+        </form>
+    </body>
+</html>
